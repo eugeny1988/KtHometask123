@@ -24,11 +24,11 @@ fun main() {
         println("После применения 1-% скидки: $sale_roubles руб. $sale_kopecks коп.")
     }
     if (is_customer_regular && (sum >= first_sum) && (sum < second_sum)) {
-        println("После применения скидки 100 рублей: ${(sum - 100).toInt()} руб. ${Math.round((sum - 100 - (sum - 100).toInt())*100)} коп.")
+        println("После применения скидки 100 рублей: ${(sum - 100).toInt()} руб. ${Math.round((sum - 100 - (sum - 100).toInt()) * 100)} коп.")
         println("После применения 1-% скидки: $sale_roubles руб. ${sale_kopecks} коп.\"")
     }
     if (is_customer_regular && (sum >= second_sum)) {
-        println("После применения 5-% скидки: ${(sum * 0.05).toInt()} руб. ${Math.round((sum * 0.05 - (sum * 0.05).toInt())*100)} коп.")
+        println("После применения 5-% скидки: ${(sum * 0.05).toInt()} руб. ${Math.round((sum * 0.05 - (sum * 0.05).toInt()) * 100)} коп.")
         println("После применения 1-% скидки: $sale_roubles руб. ${sale_kopecks} коп.\"")
     }
     if (!is_customer_regular && sum < first_sum)
