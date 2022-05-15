@@ -11,8 +11,7 @@ fun main() {
         if (isCustomerRegular) {
             if (sum < firstSum) {
                 sum * saleToRegularCustomer
-            }
-            else if ((sum >= firstSum) && (sum < secondSum)) (sum - firstSale) * saleToRegularCustomer
+            } else if ((sum >= firstSum) && (sum < secondSum)) (sum - firstSale) * saleToRegularCustomer
             else if ((sum >= secondSum)) sum * saleToRegularCustomer * (1 - secondSale) + sum * secondSale
             else return
         } else {
@@ -32,16 +31,16 @@ fun main() {
             println("После применения 1-% скидки: $scoreSale")
         }
         if (sum >= secondSum) {
-            println("После применения 5-% скидки: ${sum*secondSale}")
+            println("После применения 5-% скидки: ${sum * secondSale}")
             println("После применения 1-% скидки: $scoreSale")
         }
     }
-    if (!isCustomerRegular){
-         if (sum < firstSum)
-        println("У Вас нет никаких скидок")
-    if ((sum >= firstSum) && (sum < secondSum))
-        println("После применения скидки 100 рублей: $scoreSale")
-    if (sum >= secondSum)
-        println("После применения 5-% скидки: $scoreSale")
+    if (!isCustomerRegular) {
+        if (sum < firstSum)
+            println("У Вас нет никаких скидок")
+        if ((sum >= firstSum) && (sum < secondSum))
+            println("После применения скидки 100 рублей: $scoreSale")
+        if (sum >= secondSum)
+            println("После применения 5-% скидки: $scoreSale")
     }
 }
