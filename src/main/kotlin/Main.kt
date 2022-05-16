@@ -7,40 +7,30 @@ val saleToRegularCustomer = 0.01
 fun main() {
     println("Введите сумму покупки: ")
     var sum = readln().toDouble()
-    val scoreSale =
-        if (isCustomerRegular) {
-            if (sum < firstSum) {
-                sum * saleToRegularCustomer
-            } else if ((sum >= firstSum) && (sum < secondSum)) (sum - firstSale) * saleToRegularCustomer
-            else if ((sum >= secondSum)) sum * saleToRegularCustomer * (1 - secondSale) + sum * secondSale
-            else return
-        } else {
-            if (sum < firstSum) sum
-            else if ((sum >= firstSum) && (sum < secondSum)) firstSale
-            else if ((sum >= secondSum)) sum * secondSale
-            else return
-        }
-    val score = sum - scoreSale
     println("Покупка: $sum")
+    var scoreSale: Double
     if (isCustomerRegular) {
         if (sum < firstSum) {
-            println("После применения скидки 1%: $scoreSale")
+            scoreSale = sum * saleToRegularCustomer
+            println("После применения скидки 1%: ${sum - scoreSale}")
+        } else if ((sum >= firstSum) && (sum < secondSum)) {
+            scoreSale = (sum - firstSale) * saleToRegularCustomer
+            println("После применения скидки 100 рублей: ${sum - firstSale}")
+            println("После применения 1-% скидки: ${sum - firstSale - scoreSale}")
+        } else if ((sum >= secondSum)) {
+            scoreSale = sum * saleToRegularCustomer * (1 - secondSale) + sum * secondSale
+            println("После применения 5-% скидки: ${sum - sum * secondSale}")
+            println("После применения 1-% скидки: ${sum - scoreSale}")
         }
-        if ((sum >= firstSum) && (sum < secondSum)) {
-            println("После применения скидки 100 рублей: ${sum - secondSale}")
-            println("После применения 1-% скидки: $scoreSale")
-        }
-        if (sum >= secondSum) {
-            println("После применения 5-% скидки: ${sum * secondSale}")
-            println("После применения 1-% скидки: $scoreSale")
-        }
-    }
-    if (!isCustomerRegular) {
-        if (sum < firstSum)
+    } else {
+        if (sum < firstSum) {
             println("У Вас нет никаких скидок")
-        if ((sum >= firstSum) && (sum < secondSum))
-            println("После применения скидки 100 рублей: $scoreSale")
-        if (sum >= secondSum)
-            println("После применения 5-% скидки: $scoreSale")
+        } else if ((sum >= firstSum) && (sum < secondSum)) {
+            scoreSale = firstSale
+            println("После применения скидки 100 рублей: ${sum - scoreSale}")
+        } else if ((sum >= secondSum)) {
+            scoreSale = sum * secondSale
+            println("После применения 5-% скидки: ${sum - scoreSale}")
+        }
     }
 }
