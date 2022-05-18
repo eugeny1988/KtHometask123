@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b958166f-8241-4132-902d-5b7d923495cb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652621339205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed if-else">
+      <created>1652743743026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652743743026</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -105,6 +113,7 @@
     <MESSAGE value="Reformat code" />
     <MESSAGE value="Added camelCase" />
     <MESSAGE value="Changed conditional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed conditional" />
+    <MESSAGE value="Changed if-else" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed if-else" />
   </component>
 </project>
